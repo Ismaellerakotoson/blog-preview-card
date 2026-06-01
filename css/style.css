@@ -21,6 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
 }
 
 .sr-only {
@@ -36,7 +37,6 @@ body {
 }
 
 p {
-  font-size: 1rem;
   margin: 0px;
 }
 
@@ -49,7 +49,8 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    transition: none !important;
+    transition: none;
+    animation: none;
   }
 }
 h2:active {
@@ -93,7 +94,7 @@ button {
   border: none;
   border-radius: 5px;
   font-weight: 800;
-  margin-bottom: 0.75rem;
+  margin-block-end: 0.75rem;
   cursor: pointer;
 }
 
