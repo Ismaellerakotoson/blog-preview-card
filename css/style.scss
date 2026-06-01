@@ -1,9 +1,11 @@
-$yellow: hsl(47, 88%, 63%);
-$gray-500: hsl(0, 0%, 42%);
-$gray-800: hsl(0, 0%, 7%);
-$card-background: hsl(0, 0%, 100%);
-$border-slim: 2px black solid;
-$border-thick: 7px black solid;
+:root{
+  --yellow:hsl(47, 88%, 63%);
+  --gray-500:hsl(0, 0%, 42%);
+  --gray-800:hsl(0, 0%, 7%);
+  --card-background: hsl(0, 0%, 100%);
+}
+$border-slim: 0.1rem black solid;
+$border-thick: 0.6rem black solid;
 $text-bold: 800;
 
 @font-face {
@@ -20,11 +22,8 @@ $text-bold: 800;
   font-style: italic;
 }
 
-html{
-  font-size: 16px;
-}
 body {
-  background-color: $yellow;
+  background-color: var(--yellow);
   font-family: "Figtree", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -47,7 +46,7 @@ p {
   margin: 0px;
 }
 h2 {
-  color: $gray-800;
+  color: var(--gray-800);
   margin: 0;
   transition: color 0.2s ease;
   cursor: pointer;
@@ -59,22 +58,22 @@ h2 {
   }
 }
 h2:active {
-  color: $yellow;
+  color: var(--yellow);
 }
 .card {
-  background-color: $card-background;
+  background-color: var(--card-background);
   width: min(80%, 400px);
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 25px;
-  border-radius: 20px;
+  padding: 1.5rem;
+  border-radius: 1.3rem;
   border-top: $border-slim;
   border-left: $border-slim;
   border-bottom: $border-thick;
   border-right: $border-thick;
-  gap: 15px;
+  gap: 1rem;
 }
 .image {
   display: flex;
@@ -83,35 +82,35 @@ h2:active {
 .image img {
   width: 100%;
   display: block;
-  border-radius: 10px;
+  border-radius: 0.7rem;
 }
 .img-bottom p {
   font-weight: 500;
 }
 button {
-  background-color: $yellow;
-  padding: 10px 20px 10px 20px;
+  background-color: var(--yellow);
+  padding: 0.5rem 1.3rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   font-weight: $text-bold;
   margin-block-end: 0.75rem;
   cursor: pointer;
 }
 .contain p {
-  color: $gray-500;
+  color: var(--gray-500);
   margin-top: 1rem;
 }
 .avatar {
   display: flex;
-  gap: 10px;
+  gap: 0.6rem;
   align-items: center;
 }
 .avatar p {
-  color: $gray-800;
+  color: var(--gray-800);
   font-weight: 800;
 }
 .avatar img {
-  width: 35px;
+  width: 2.2rem;
   height: auto;
   object-fit: cover;
 }
