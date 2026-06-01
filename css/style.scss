@@ -35,7 +35,7 @@ body {
   position: absolute;
   width: 0.1rem;
   height: 0.1rem;
-  padding: 0;
+  padding: calc(0rem);
   margin: calc(-0.1rem);
   overflow: hidden;
   clip: rect(0,0,0,0);
@@ -62,12 +62,12 @@ h2:active {
 }
 .card {
   background-color: var(--card-background);
-  width: min(80%, 400px);
+  width: min(80%, 25rem);
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
+  padding: calc(1.5rem);
   border-radius: 1.3rem;
   border-top: $border-slim;
   border-left: $border-slim;
@@ -89,7 +89,7 @@ h2:active {
 }
 button {
   background-color: var(--yellow);
-  padding: 0.5rem 1.3rem;
+  padding: calc(0.5rem) calc(1.3rem) ;
   border: none;
   border-radius: 0.3rem;
   font-weight: $text-bold;
