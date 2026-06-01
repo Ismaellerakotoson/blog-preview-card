@@ -20,6 +20,9 @@ $text-bold: 800;
   font-style: italic;
 }
 
+html{
+  font-size: 16px;
+}
 body {
   background-color: $primary-color;
   font-family: "Figtree", sans-serif;
@@ -28,8 +31,19 @@ body {
   justify-content: center;
   align-items: center;
 }
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
 p {
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0px;
 }
 h2 {
@@ -38,7 +52,11 @@ h2 {
   transition: color 0.2s ease;
   cursor: pointer;
 }
-
+@media (prefers-reduced-motion: reduce){
+  *{
+    transition: none !important;
+  }
+}
 h2:active {
   color: $primary-color;
 }
@@ -75,12 +93,12 @@ button {
   border: none;
   border-radius: 5px;
   font-weight: $text-bold;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   cursor: pointer;
 }
 .contain p {
   color: $gray-500;
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 .avatar {
   display: flex;
